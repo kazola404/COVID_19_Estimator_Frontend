@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="COVID_19_Estimator">
+    <meta name="author" content="Ganiyu Kazeem">
+
+    <!-- Title Page-->
+    <title>COVID_19_Estimator</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body style="background-color: #050E6C;">
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Estimation Information</h2>
+                    <form method="POST" action="" id="est_form">
+                        <div class="input-group">
+                            <input class="input--style-3" data="data-population" type="text" placeholder="Enter Population" id="population" name="population">
+                            <span style="color:red">
+                                <strong id="errorPopulationEstimator"></strong>
+                            </span>
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-3" data="data-time-to-elapse" type="text" placeholder="Enter time to elapse" id="timeToElapse" name="timeToElapse">
+                            <span style="color:red">
+                                <strong id="errorTimeToElapseEstimator"></strong>
+                            </span>
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-3" data="data-reported-cases" type="text" placeholder="Enter reported cases" id="reportedCases" name="reportedCases">
+                            <span style="color:red">
+                                <strong id="errorReportedCasesEstimator"></strong>
+                            </span>
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-3" data="data-total-hospital-beds" type="text" placeholder="Enter total hospital beds" id="totalHospitalBeds" name="totalHospitalBeds">
+                            <span style="color:red">
+                                <strong id="errorTotalHospitalBedsEstimator"></strong>
+                            </span>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select id="periodType" data="data-period-type" name="periodType">
+                                    <option disabled="disabled" selected="selected">Select Period Type</option>
+                                    <option value="days">days</option>
+                                    <option value="weeks">weeks</option>
+                                    <option value="months">months</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                                <span style="color:red">
+                                    <strong id="errorPeriodTypeEstimator"></strong>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" data="data-go-
+                            estimate" type="submit" id="btnSubmit" role="button">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- -------------------- ----------------- -->
+            <br/><br/>
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-body">
+                            <div class="table-responsive" id="tbl">
+                                
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+    <script src="js/estimator.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
